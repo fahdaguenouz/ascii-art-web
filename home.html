@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ASCII-ART-WEB</h1>
+
+    <form action="/ascii-art" method="post">
+        <textarea name="data" id="textarea" maxlength="200" cols="40" rows="10" required></textarea>
+        <div class="checkbox">
+            <input type="radio" name="banner" id="" value="standard" checked>standard
+            <input type="radio" name="banner" id="" value="shadow">shadow
+            <input type="radio" name="banner" id="" value="thinkertoy">thinkertoy
+        </div>
+        <div class="btn">
+            <button type="submit" style="padding: 10px; background: blue; color: white; font-size: 20px; 
+            border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">Submit</button>
+        </div>
+    </form>
+
+    <h2 class="a">Result:</h2>
+    <div class="result">
+        <pre>{{.Res}}</pre>
+    </div>
+</body>
+</html>
