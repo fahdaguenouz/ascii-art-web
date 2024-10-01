@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+
 type Data struct {
 	Str string
 	Banner string
