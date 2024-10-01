@@ -33,8 +33,8 @@ func processHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Banner not found", http.StatusNotFound) // Return 404 if banner is not found
 		return
 	}
-	data.Str = strings.ReplaceAll(data.Str, "\r\n", "\\n")
-	data.Str = strings.ReplaceAll(data.Str, "\n", "\\n")
+	data.Str = strings.ReplaceAll(data.Str, "\r\n", "\n")
+	fmt.Println(data.Str)
 	data.Res = function.TraitmentData(data.Banner, data.Str)
 	if data.Res == "" { // If TraitmentData failed to generate the result
 		http.Error(w, "Internal Server Error: Failed to process data.", http.StatusInternalServerError)

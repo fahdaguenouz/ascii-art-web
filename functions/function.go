@@ -7,12 +7,9 @@ import (
 	"strings"
 )
 
-
-func TraitmentData(bnr string,  arg string) string {
+func TraitmentData(bnr string, arg string) string {
 	banner := bnr
-
-	
-	fileName := "./banners/"+banner+".txt"
+	fileName := "./banners/" + banner + ".txt"
 	// Open the ASCII art file
 	file, err := os.Open(fileName)
 	if err != nil {
@@ -27,9 +24,9 @@ func TraitmentData(bnr string,  arg string) string {
 	if err := scanner.Err(); err != nil {
 		return "Error reading the file"
 	}
-	
+
 	var result string
-	lines := strings.Split(arg, "\\n")
+	lines := strings.Split(arg, "\n")
 	for _, line := range lines {
 		if line == "" {
 			result += "\n"
@@ -50,7 +47,6 @@ func TraitmentData(bnr string,  arg string) string {
 	}
 	return result
 }
-
 
 func BannerExists(banner string) bool {
 	// Check if the provided banner exists (this is a placeholder function)
