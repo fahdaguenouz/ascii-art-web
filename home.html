@@ -20,10 +20,11 @@
             border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">Submit</button>
         </div>
     </form>
-
+    {{if .Res }}
     <h2 class="a">Result:</h2>
     <div class="result">
         <pre>{{.Res}}</pre>
     </div>
+{{end}}
 </body>
 </html>
